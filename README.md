@@ -9,6 +9,12 @@ $ git clone https://github.com/h-jennings/code-perfect-mega-template.git [projec
 
 ```
 
+### Installing package dependencies
+``` sh
+$ npm i
+
+```
+
 ### Starting the development/build process 
 
 ``` sh

@@ -21,55 +21,46 @@ th.align--left {
 
 /* * Padding Helper Classes */
 
-.paddlr--primary {
+.pad-lr--10 {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-.paddlr--md {
+.pad-lr--25 {
   padding-right: 25px;
   padding-left: 25px;
 }
 
-.paddlr--lg {
+.pad-lr--35 {
   padding-left: 35px;
   padding-right: 35px;
 }
 
-.paddtb--primary {
+.pad-tb--35 {
   padding-top: 35px;
   padding-bottom: 35px;
 }
 
-.paddtb--30 {
+.pad-tb--30 {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.paddtb--lg {
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-
-.paddtb--sm {
+.pad-tb--20 {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.paddBtm--sm {
+.pad-btm--10 {
   padding-bottom: 10px;
 }
 
-.paddBtm--primary {
+.pad-btm--20 {
   padding-bottom: 20px;
 }
 
-.paddBtm--md {
+.pad-btm--30 {
   padding-bottom: 30px;
-}
-
-.paddBtm--lg {
-  padding-bottom: 50px;
 }
 
 /* * Text Helper Classes */
