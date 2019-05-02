@@ -3,11 +3,19 @@ Boilerplate for starting new emails projects. This is intended as a starting poi
 
 ## Getting Started
 
+> ### **Before you get started**:
+> You need to make sure that you have [git](https://git-scm.com/) and [node](https://nodejs.org/en/) installed on your machine. Whatever the latest version is should suffice.
+
+### Open up your machines terminal
+
+On a windows machine, powershell should do the trick
+
 ### Cloning the repo
 ``` sh
 $ git clone https://github.com/h-jennings/code-perfect-mega-template.git [project-name]
 
 ```
+> **Note:** Avoid cloning this repo into a OneDrive directory. This repo contains thousands of tiny files that are completely unnecessary once you're done with the development process, and **do not** need to be synced to the cloud.  
 
 ### Installing package dependencies
 ``` sh
@@ -15,13 +23,26 @@ $ npm i
 
 ```
 
+>**Note:**Unless you are contributing to the repo, I would go ahead and get rid of any files related to git. **You may need to make hidden files on your machine visible to do this.**
+
 ### Starting the development/build process 
 
 ``` sh
 $ gulp
 
 ```
-_This will open your default browser and create a hot-reloading development environment (edit the gulpfile.js to alter this)._
+
+### What's happening now?
+Now that you've started the development environment by typing in that gulp command a few things are happening:
+
+1. This will open your default browser and create a hot-reloading development environment
+2. The gulp script is now watching for changes in files that exist in the `src` folder
+3. Any time you make a change to the `index.html` file in the `src` folder and **save**, the html is then copied, all css is automatically inlined (pulling from the `styles.css` referenced in the `index.html` document), and placed in the `dist/build-inline` folder.
+    * **Quick Note:** I would recommend only inlining styles manually on two occasions:
+        1. For layout purposes (ex. `width: 50%;`)
+            * I've found that since we're primarily doing table-based layouts, writing the **layout-specific** inline styles seem to be easier to read and manage.
+        2. Or for stylistic purposes when it's absolutely more convenient then creating a unique class.
+            * Not the best practice in the world, I know. But hey, this is email development.
 
 
 ## List of Available Modules
