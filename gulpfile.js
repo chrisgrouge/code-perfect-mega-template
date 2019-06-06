@@ -20,20 +20,6 @@ gulp.task("nunjucks", function () {
     }))
 });
 
-// Automatic Inlining
-gulp.task("gulpInline", function() {
-  gulp
-    .src("Master-Template/src/build.html")
-    .pipe(gulpInline({ preserveMediaQueries: true, applyWidthAttributes: true, removeLinkTags: false }))
-    .pipe(gulp.dest("Master-Template/dist/build-inline"))
-    .pipe(
-      browserSync.reload({
-        stream: true
-      })
-    );
-});
-
-
 //Browser-syncing 
 gulp.task("browserSync", runSync);
 
@@ -49,7 +35,7 @@ function runSync() {
 }
 
 // Watchers
-gulp.task("watch", ["gulpInline", "browserSync", "nunjucks"], function() {
+gulp.task("watch", ["browserSync", "nunjucks"], function() {
   gulp.watch(["Master-Template/src/css/*.css"], ["nunjucks"]);
   gulp.watch(["Master-Template/src/**/*.+(html|nunjucks|njk)"], ["nunjucks"]);
 });
