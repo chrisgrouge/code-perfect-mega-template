@@ -12,7 +12,8 @@
     "browser-sync": "^2.26.5",
     "gulp": "^3.9.1",
     "gulp-imagemin": "^5.0.3",
-    "gulp-inline-css": "^3.3.0"
+    "gulp-inline-css": "^3.3.0",
+    "gulp-nunjucks-render": "^2.2.3"
   },
   "dependencies": {
     "natives": "^1.1.6"
