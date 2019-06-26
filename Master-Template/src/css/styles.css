@@ -65,9 +65,21 @@
   color: #34bbdb; }
 
 .txt--btn.ghost-white {
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   background-color: unset;
-  color: #FFFFFF; }
+  color: #ffffff; }
+
+.txt--btn-full {
+  color: #ffffff;
+  text-align: center;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: #34bbdb;
+  padding: 15px 40px 15px 40px; }
+  .txt--btn-full a {
+    text-decoration: none;
+    color: #ffffff; }
 
 .topNavLink {
   font-family: "Rubik", sans-serif;

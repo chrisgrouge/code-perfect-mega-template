@@ -58,7 +58,7 @@
 }
 
 .txt--btn {
-  color: #ffffff;
+  color: $white;
   text-align: center;
   line-height: 1;
   font-weight: 600;
@@ -75,9 +75,24 @@
 }
 
 .txt--btn.ghost-white {
-  border: 2px solid #FFFFFF;
+  border: 2px solid $white;
   background-color: unset;
-  color: #FFFFFF;
+  color: $white;
+}
+
+.txt--btn-full {
+  color: $white;
+  text-align: center;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: $blue;
+  padding: 15px 40px 15px 40px;
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
 }
 
 .topNavLink {
@@ -103,7 +118,7 @@
   line-height: 1.3;
   font-size: 15px;
   font-family: $primary-font;
-  color: #ffffff;
+  color: $white;
 }
 
 .txt--footer--contact {
@@ -112,7 +127,7 @@
   line-height: 1.3;
   font-size: 15px;
   font-family: $primary-font;
-  color: #ffffff;
+  color: $white;
 }
 
 .mobilenav {
@@ -135,5 +150,5 @@
   line-height: 1;
   font-size: 13px;
   font-family: $primary-font;
-  color: #ffffff;
+  color: $white;
 }

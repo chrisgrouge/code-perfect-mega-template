@@ -44,7 +44,7 @@ function runSync() {
 }
 
 // Watchers
-gulp.task("watch", ["browserSync", "nunjucks", "sass"], function() {
+gulp.task("watch", ["browserSync", "sass", "nunjucks"], function() {
   gulp.watch(["Master-Template/src/css/*.css"], ["nunjucks"]);
   gulp.watch(["Master-Template/src/scss/**/*.scss"], ["sass"]);
   gulp.watch(["Master-Template/src/**/*.+(html|nunjucks|njk)"], ["nunjucks"]);
