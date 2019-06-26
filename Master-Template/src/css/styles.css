@@ -26,6 +26,11 @@ th.align--left {
   padding-right: 10px;
 }
 
+.pad-lr--20 {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
 .pad-lr--25 {
   padding-right: 25px;
   padding-left: 25px;
