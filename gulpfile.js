@@ -9,13 +9,13 @@ const gulpInline = require("gulp-inline-css");
 const sass = require('gulp-sass');
 const nunjucksRender = require("gulp-nunjucks-render");
 const htmlmin = require('gulp-html-minifier');
+const dom = require('gulp-dom');
 const browserSync = require("browser-sync");
 const server = browserSync.create();
 
 sass.compiler = require('node-sass');
 
 
-// TODO: NEED TO CREATE A 'COPY' TASK FOR ASSETS
 
 function copy() {
   return src('./Master-Template/src/assets/*.+(png|jpg|gif|jpeg)')
@@ -59,13 +59,29 @@ function nunjucks() {
 
 */
 
+/* 
+  ! This is pretty much complete!
+  ! The only improvement that could
+  ! be made would be to remove the tags that 
+  !  'gulp-dom' wraps around the module */ 
+
+function getDataAttributes() {
+  let number = -1;
+    this.querySelectorAll('[data-type]').forEach(cell => {
+      const attr = this.querySelector('span').getAttribute('data');
+      cell.setAttribute('data', `${attr}${number += 1}`);
+    });
+  return this;
+}
+
+
 function nunjucks_cp() {
   return src('Master-Template/src/pages/modules/*.+(html|nunjucks|njk)')
-    .pipe(insertDataAttributes(markup))
-    .pipe(
-      nunjucksRender({
-        path: ["Master-Template/src/templates"]
-      }))
+  .pipe(
+    nunjucksRender({
+      path: ["Master-Template/src/templates"]
+    }))
+      .pipe(dom(getDataAttributes))
       .pipe(htmlmin({
         collapseWhitespace: true
       }))
