@@ -1,0 +1,10 @@
+{% extends "cp-wrapper.njk" %}
+
+{% block content %}
+{% include "./partials/main-body/test.njk" %}
+{% endblock %}
+
+<!-- Sets the unique ID for the code perfect module -->
+{% set id_var = "test1" %}
+<!-- Should match what's in the data="" html attributes -->
+{% set data_var = "Test 1 data" %}
