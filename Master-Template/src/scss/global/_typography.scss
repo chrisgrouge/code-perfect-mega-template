@@ -95,6 +95,15 @@
   }
 }
 
+.txt--bullet {
+  text-align: left;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 15px;
+  font-family: $primary-font;
+  color: $black;
+}
+
 .topNavLink {
   font-family: $primary-font;
   padding: 0 20px;
