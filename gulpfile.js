@@ -85,7 +85,7 @@ function nunjucks_cp() {
       .pipe(htmlmin({
         collapseWhitespace: true
       }))
-    .pipe(dest('Master-Template/dist/modules-test'))
+    .pipe(dest('Master-Template/dist/modules'))
 }
 
 function sassFn() {
