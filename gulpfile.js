@@ -105,12 +105,6 @@ function browser_sync(done) {
   done();
 }
 
-// ? Not sure if I'll need this
-/* function reload(done) {
-  server.reload();
-  done();
-} */
-
 function watchFiles() {
   watch(
     [
@@ -120,7 +114,7 @@ function watchFiles() {
   watch('Master-Template/src/assets/*.+(png|jpg|gif|jpeg)', copy)
 }
 
-const watchFn = parallel(watchFiles, browser_sync);
+const watchFn = series(sassFn, nunjucks, parallel(watchFiles, browser_sync));
 
 exports.default = watchFn;
 
